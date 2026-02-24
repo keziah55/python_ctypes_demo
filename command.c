@@ -20,8 +20,9 @@ void printDemoStruct(struct DemoStruct *ds) {
 }
 
 void printCommand(struct CommandStruct *cs) {
+
   for (uint8_t i = 0; i < cs->size; i++)
-    printf("Command: %d\n", *(cs + i));
+    printf("Command: %d\n", *(cs->command + i));
 }
 
 int main() {

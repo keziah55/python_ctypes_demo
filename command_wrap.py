@@ -24,8 +24,8 @@ if __name__ == "__main__":
 
     libc.printDemoStruct(ctypes.byref(ds))
 
-    cmd = "1234"
-    cmd_bts = bytes.fromhex(cmd)
+    cmd = "0x1234"
+    cmd_bts = bytes.fromhex(cmd[2:])
     print(cmd_bts)
 
     Array = ctypes.c_uint8 * len(cmd_bts)
